@@ -33,3 +33,13 @@
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+#right-side {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#right-side > div {
+  width: 100%;
+  flex: 33%;
+}
