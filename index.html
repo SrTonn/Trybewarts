@@ -37,16 +37,57 @@
 
   <main>
     <form action="#" id="evaluation-form">
-      <input id="input-name" type="text" placeholder="Nome">
-      <input id="input-email" type="email" placeholder="Email">
-      <input id="input-lastname" type="text" placeholder="Sobrenome">
+      <div id="input-container">
+        <input id="input-name" type="text" placeholder="Nome">
+        <input id="input-lastname" type="text" placeholder="Sobrenome">
+        <input id="input-email" type="email" placeholder="Email">
 
-      <select name="" id="house">
-        <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-        <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-        <option value="Corvinode" id="corvinode-house">Corvinode</option>
-        <option value="Pytherina" id="pytherina-house">Pytherina</option>
-      </select>
+        <select name="" id="house">
+          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+          <option value="Corvinode" id="corvinode-house">Corvinode</option>
+          <option value="Pytherina" id="pytherina-house">Pytherina</option>
+        </select>
+      </div>
+
+      <div>
+        <label id="label-family" for="">Qual sua família?</label>
+        <div>
+          <label for="frontend">
+            <input
+              id="frontend"
+              type="radio"
+              name="family"
+              value="Frontend"
+            >
+            <span>Família Frontend</span>
+          </label>
+        </div>
+
+        <div>
+          <label for="backend">
+            <input
+              id="backend"
+              type="radio"
+              name="family"
+              value="Backend"
+            >
+            <span>Família Backend</span>
+          </label>
+        </div>
+
+        <div>
+          <label for="fullstack">
+            <input
+              id="fullstack"
+              type="radio"
+              name="family"
+              value="FullStack"
+            >
+            <span>Família FullStack</span>
+          </label>
+        </div>
+      </div>
     </form>
 
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="trybewarts logo">
