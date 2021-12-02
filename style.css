@@ -16,10 +16,15 @@
 }
 
 #evaluation-form {
-  flex-direction: column;
   width: 675px;
+  flex-flow: column wrap;
 }
 
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+#evaluation-form > input , #house {
+  width: 100%;
+  flex: 50%;
 }
