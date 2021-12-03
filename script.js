@@ -70,7 +70,7 @@ function catchVoteRate() {
  * https://github.com/tryber/sd-018-b-project-trybewarts/pull/37/files#diff-ed3ee7e0beea2498ff3b8ca85973d122fc6fa3d585d62b5807ec034d0cf076b3
  */
 function catchSubjects() {
-  const options = document.querySelectorAll('input[class=\'subject\']:checked');
+  const options = document.querySelectorAll('input[class="subject"]:checked');
   const selectedList = [];
   options.forEach((option) => {
     selectedList.push(option.value);
