@@ -5,9 +5,12 @@ const btnSubmit = document.querySelector('#submit-btn');
 const checkBoxAgreement = document.querySelector('#agreement');
 const counterTextSpan = document.querySelector('#counter');
 const textArea = document.querySelector('#textarea');
-const answerPopUp = document.querySelector('#answer-popup');
+const answerModal = document.querySelector('#answer-modal');
+const shadowModal = document.querySelector('#shadow-modal');
+const tagUl = document.querySelector('#answer-modal ul');
 const rateList = document.querySelectorAll('#container-rate input');
 const familyList = document.querySelectorAll('#container-family input');
+const btnClose = document.querySelector('#close-btn');
 const users = {
   trybe: {
     email: 'tryber@teste.com',
@@ -84,21 +87,29 @@ function submitForm(event) {
   const inputEmail = document.querySelector('#input-email').value;
   const houseSelected = document.querySelector('#house').value;
 
-  answerPopUp.innerHTML = `
-  <p>Nome: ${inputName} ${inputLastName}</p>
-  <p>Email: ${inputEmail}</p>
-  <p>Casa: ${houseSelected}</p>
-  <p>Família: ${catchFamily()}</p>
-  <p>Matérias: ${catchSubjects()}</p>
-  <p>Avaliação: ${catchVoteRate()}</p>
-  <p>Observações: ${textArea.value}</p>
+  answerModal.style.display = 'block';
+  shadowModal.style.display = 'block';
+  tagUl.innerHTML = `
+  <li>Nome: ${inputName} ${inputLastName}</li>
+  <li>Email: ${inputEmail}</li>
+  <li>Casa: ${houseSelected}</li>
+  <li>Família: ${catchFamily()}</li>
+  <li>Matérias: ${catchSubjects()}</li>
+  <li>Avaliação: ${catchVoteRate()}</li>
+  <li>Observações: ${textArea.value}</li>
   `;
+}
+
+function closeModal() {
+  shadowModal.style.display = 'none';
+  answerModal.style.display = 'none';
 }
 
 btnLogin.addEventListener('click', validateLogin);
 checkBoxAgreement.addEventListener('click', toggleButton);
 textArea.addEventListener('input', counterText);
 btnSubmit.addEventListener('click', submitForm);
+btnClose.addEventListener('click', closeModal);
 
 /**
  * Não conseguimos compreender o enunciado do requisito 21
