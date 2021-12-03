@@ -3,6 +3,8 @@ const inputPassword = document.getElementById('password');
 const btnLogin = document.getElementById('login');
 const btnSubmit = document.querySelector('#submit-btn');
 const checkBoxAgreement = document.querySelector('#agreement');
+const counterTextSpan = document.querySelector('#counter');
+const textArea = document.querySelector('#textarea');
 
 const users = {
   trybe: {
@@ -29,5 +31,10 @@ function toggleButton(event) {
   btnSubmit.disabled = !isAgreementChecked;
 }
 
+function counterText() {
+  counterTextSpan.innerText = 500 - textArea.value.length;
+}
+
 btnLogin.addEventListener('click', validateLogin);
 checkBoxAgreement.addEventListener('click', toggleButton);
+textArea.addEventListener('keyup', counterText);

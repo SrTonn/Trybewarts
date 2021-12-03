@@ -43,3 +43,33 @@
   width: 100%;
   flex: 33%;
 }
+
+#wrap {
+  display: inline-block;
+  position: relative;
+}
+
+#wrap span {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
+
+/* https://jsfiddle.net/Kurenaikunai/8zLtdsm8/ */
+#counter {
+  background-color: rgb(50, 167, 145);
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  line-height: 12px;
+  height: 20px;
+  text-align: center;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-weight: 600;
+}
+
+#textarea {
+  width: 100%;
+  resize: none;
+}
