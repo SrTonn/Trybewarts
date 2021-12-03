@@ -97,11 +97,11 @@ function submitForm(event) {
 
 btnLogin.addEventListener('click', validateLogin);
 checkBoxAgreement.addEventListener('click', toggleButton);
-textArea.addEventListener('keyup', counterText);
+textArea.addEventListener('input', counterText);
 btnSubmit.addEventListener('click', submitForm);
 
 /**
- * Obtivemos conhecimento do que era para ter sido feito através do PR da dupla
  * Não conseguimos compreender o enunciado do requisito 21
+ * Obtivemos conhecimento do que era para ter sido feito através do PR da dupla,
  * Polyana Sousa e Lilian Azevedo
  */
