@@ -1,6 +1,9 @@
 const inputEmail = document.getElementById('email');
 const inputPassword = document.getElementById('password');
 const btnLogin = document.getElementById('login');
+const btnSubmit = document.querySelector('#submit-btn');
+const checkBoxAgreement = document.querySelector('#agreement');
+
 const users = {
   trybe: {
     email: 'tryber@teste.com',
@@ -21,4 +24,10 @@ function validateLogin(event) {
   }
 }
 
+function toggleButton(event) {
+  const isAgreementChecked = event.target.checked;
+  btnSubmit.disabled = !isAgreementChecked;
+}
+
 btnLogin.addEventListener('click', validateLogin);
+checkBoxAgreement.addEventListener('click', toggleButton);
